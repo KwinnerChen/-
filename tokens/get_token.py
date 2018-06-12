@@ -58,4 +58,5 @@ def get_token(ak, sk):  # 试图从文件读取token，过期或不存在或密�
 
 if __name__ == '__main__':
     dic = get_token(ak='8oZOs5ypdEPB9cngmlntHX9F', sk='rsH2SpbPitZKVdde6Q44ZxPNY92U47QM')
-    print(dic)
+
+    print(dic['access_token'])
