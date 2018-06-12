@@ -29,7 +29,8 @@ def _refresh_token(ak, sk):  # 请求token，返回字典
 
 def get_token(ak, sk, flag='content'):  # 试图从文件读取token，过期或不存在或密钥不匹配刷新后，再返回字典
     '''用于获取ak=api_key,sk=secret_key的token，返回的是一个字典。ak,sk在百度开放AI平台账户生成。
-       包含:
+       用于检测类型时flag为type，用于检测内容时flag为content。
+       结果字典包含:
        "refresh_token":str,
        "expires_in":int，有效时间，秒，
        "scope":str,
