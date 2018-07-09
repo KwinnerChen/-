@@ -47,7 +47,7 @@ if __name__ == '__main__':
     sk = input('输入你的Secret Key：')
     file = input('需要识别的图片路径：')
     flag = input('识别类型（type：主题类型，content：内容，position：主体位置）：')
-    access_token = get_token(ak=ak,sk=sk, flag=flag)['access_token']
+    access_token = get_token(ak=ak, sk=sk, flag=flag)['access_token']
     dic = recognize(r'%s' % file, access_token, flag=flag)
     print(dic)
     input('按任意键退出！')
